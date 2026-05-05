@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "scenario_id": "liwld_phase_a_v1",
+  "label": "Phase A canonical (de-identified)",
+  "data_source": "PHASE_A_REAL_DATA",
+  "data_classification": "INTERNAL",
+  "cohort": {
+    "grade_prior": 5,
+    "grade_current": 6,
+    "year_prior": "2008",
+    "year_current": "2009",
+    "content_area": "MATHEMATICS",
+    "subgroup_filter": "DISTRICT_NUMBER == \"0020\""
+  },
+  "n_subgroup": 2618,
+  "n_population": 53791,
+  "copula": {
+    "family": "t",
+    "rho": 0.8542,
+    "df": 25.2571,
+    "df_display": 25
+  },
+  "regime_grid": {
+    "m_min": 0.05,
+    "m_max": 0.95,
+    "m_n": 45,
+    "m_scale": "linear",
+    "k_min": 1.5,
+    "k_max": 60,
+    "k_n": 30,
+    "k_scale": "log"
+  },
+  "v_grid": {
+    "v_min": 0.005,
+    "v_max": 0.995,
+    "v_n": 200
+  },
+  "argmin": {
+    "m": 0.47954545,
+    "k": 2.19695723,
+    "m_idx": 21,
+    "k_idx": 3,
+    "w1": 0.00502315
+  },
+  "uniform_ref": {
+    "m": 0.5,
+    "k": 2,
+    "w1": 0.01465275
+  },
+  "files": {
+    "panel_1_u": "panel1_u_curves.json",
+    "panel_2_copula": "panel2_copula_contours.json",
+    "panel_3_grid": "panel3_w1_surface.bin",
+    "panel_5_observed_v": "panel5_v_observed.json",
+    "panel_5_induced_v": "panel5_v_induced.bin"
+  },
+  "checksums": {
+    "panel_1_u": "923e35c8e419345c5c1f4fd8af45d16e192240f56c1db9732f833ad72231b17d",
+    "panel_2_copula": "6bd15d465aa6481c2a8d34d5e37ecc7e5e3ad634a0a58b81d8cfc1e29b462b0d",
+    "panel_3_grid": "093375a607328d2f04cc1cf6afd1e0248aacdc6d2c0da64480a136250d47437f",
+    "panel_5_observed_v": "2415be941baa588a63dccb8d09ac7c31daf609701108cceb96f3bb8c0bf311d4",
+    "panel_5_induced_v": "ea060c8dc82db0d719dd8790716d8e892e244bc18e437ca03418b91bf9289d36"
+  },
+  "build": {
+    "timestamp_utc": "2026-05-05T13:02:15Z",
+    "tool": "liwld_precompute.R",
+    "tool_version": "0.1.3",
+    "r_version": "4.5.2"
+  }
+}

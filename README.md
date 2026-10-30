@@ -1,5 +1,7 @@
 # Longitudinal Inference Without Longitudinal Data
 
+Part of Damian Betebenner's talks: <https://dbetebenner.github.io/talks/>
+
 ### A Copula Based Framework for Modeling Dependence and Growth in Educational Assessment
 
 **Damian W. Betebenner** (National Center for the Improvement of Educational Assessment)
@@ -13,21 +15,27 @@ The slides are hosted via GitHub Pages at:
 
 ## Repository Contents
 
+Rendered from the Betebenner_Braun Paper_1 project.
+
     docs/
       index.html                     # Reveal.js presentation (rendered via Quarto)
       assets/
-        In_Order_We_Trust.pdf        # Linked PDF (QR target on the references slide)
+        In_Order_We_Trust.pdf        # Linked PDF
         apps/
           liwld/                     # Embedded D3 interactive (LIwLD explainer)
             index.html
             assets/                  # Hashed JS+CSS bundle, KaTeX fonts (~3.8 MB)
             data/scenarios/          # Precomputed Phase-A analytic payload
+      docs/assets/
+        In_Order_We_Trust.pdf        # Copy at the URL the slide QR encodes (see below)
 
 Most assets (figures, fonts, slide CSS/JS) are embedded directly in `index.html`
 via Quarto's `embed-resources: true`. The LIwLD interactive is the one
 exception: it lives at `docs/assets/apps/liwld/` and is loaded into a slide via
 iframe so the React/D3 application and its precomputed bundle can be served as
 separate files.
+
+The QR code on the slides encodes `.../NCIEA_2026_Colloquium/docs/assets/In_Order_We_Trust.pdf`. GitHub Pages serves `docs/` as the site root, so that URL needs the copy at `docs/docs/assets/`. Keep both copies: the deck has already been presented and the printed QR cannot change.
 
 ## About the Presentation
 
